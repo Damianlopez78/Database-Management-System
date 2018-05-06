@@ -55,10 +55,10 @@
           </div>
              <h5 id="invalid">**Invalid Credentials!!! Try Again!!!</h5>
           <div class="modal-body">
-            <form id="signupform" action="/signup" method="post">
+            <form id="signupform" action="cgiScripts.py" method="POST">
               <div class="form-group">
                 <label for="fullname">Full Name</label>
-                <input type="text" name="fullname" placeholder="Full Name" id="fullname">
+                <input type="text" name="fullname" placeholder="Full Name" id="fullname" value="{{request.form.name}}">
               </div>
               <div class="form-group">
                 <label for="username">User Name (Not required)</label>
@@ -66,7 +66,7 @@
               </div>
               <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="text" name="email" placeholder="Email Address" id="email">
+                <input type="text" name="email" placeholder="Email Address" id="email" value="{{request.form.email}}">
               </div>
                 <div class="btn-group" role="group" aria-label="Basic example">
                   <button id="employee" type="button" class="btn btn-primary">Employee</button>
